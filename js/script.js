@@ -1,16 +1,55 @@
+var sides = [];
+var angles = [];
+
+
+
+
 //Accept inputs from html page
 
-sideA = parseInt(myform.sideA.value);
-sideB = parseInt(myform.sideB.value);   
-sideC = parseInt(myform.sideC.value);    
-angleA = parseInt(myform.angleA.value);
-angleB = parseInt(myform.angleB.value); 
-angleC = parseInt(myform.angleC.value);
 
+
+
+
+function sidesAppendA(sideA){
+    a = sideA;
+    sides.push(sideA);
+    alert(sides);
+}
+function sidesAppendB(sideB){
+    b = sideB;
+    sides.push(sideB);
+    alert(sides);
+
+}
+function sidesAppendC(sideC){
+    c = sideC;
+    sides.push(sideC);
+    alert(sides);
+
+}
+function anglesAppendA(angleA){
+    A = angleA;
+    angles.push(angleA);
+    alert(angles);
+
+}
+function anglesAppendB(angleB){
+    B = angleB;
+    angles.push(angleB);S
+    alert(angles);
+
+}
+function anglesAppendC(angleC){
+    C = angleC;
+    angles.push(angleC);
+    alert(C);
+
+}
 
 /*Checking for general triangle*/
 
 //Check if inputs are exactly 3
+
 
 //Check if of the three inputs, atleast one side has been included
 
