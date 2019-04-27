@@ -96,8 +96,12 @@ var toRadians = function (degrees){
 var toAngle = function (radians){
    return (180 * radians / Math.PI);
 }
+
+
 function calculate (){
+
 //Scenario1 - All sides entered (SSS)
+
 if (sides.length === 3){
    var sss = function (side1, side2, side3){
        return toAngle (Math.acos( ((side2*side2) + (side3*side3) - (side1*side1))/(2*side2*side3) ) ).toFixed(4);
@@ -109,6 +113,49 @@ if (sides.length === 3){
    console.log(A, B, C);
 }
 
+//Scenario2 - 2 Angles and 1 Side (AAS)
+
+if (sides.length === 1){
+
+    //First, determine missing angle
+    //Then calculate its angle using a function
+
+    var aasAngle = function(angle1,angle2){
+        return (180-(angle1+angle2));
+    }
+
+    if (A === 0){
+        A = aasAngle(B,C);
+    }
+    else if (B === 0){
+        B = aasAngle(A,C);
+    }    
+    else if (C === 0){
+        C = aasAngle(A,B);
+    }
+    console.log(A,B,C);
+
+    //Then determine missing sides
+    //Then determine the measure of the missing sides
+    
+    var aasSides = function(knownSide,knownSideAngle,unknownSideAngle){
+        return((((Math.sin(toRadians(unknownSideAngle)))/(Math.sin( toRadians(knownSideAngle))))*knownSide)).toFixed(4);
+    }
+    if (a !== 0){
+        b = aasSides(a,A,B);
+        c = aasSides(a,A,C);
+    }
+    if (b !== 0){
+        a = aasSides(b,B,A);
+        c = aasSides(b,B,C); 
+    }        
+    if (c !== 0){
+        b = aasSides(c,C,B);
+        a = aasSides(c,C,A);
+    }
+    console.log(a,b,c);
+
+}
 
 
 //Scenario2 - 2 Sides, 1 Angle (SSA)
