@@ -11,33 +11,55 @@ var C = 0;
 
 function sidesAppendA(sideA){
     a = sideA;
-    console.log(sideA);
-
+    sides.push(sideA);
+    console.log(sides);
+    checker();
 }
 function sidesAppendB(sideB){
     b = sideB;
-    console.log(sideB);
-
+    sides.push(sideB);
+    console.log(sides);
+    checker();
 }
 function sidesAppendC(sideC){
     c = sideC;
-    console.log(sideC);
+    sides.push(sideC);
+    console.log(sides);
+    checker();
 }
+
 function anglesAppendA(angleA){
     A = angleA;
-    console.log(angleA);
+    angles.push(angleA);
+    console.log(angles);
+    checker();
 }
 function anglesAppendB(angleB){
     B = angleB;
-    console.log(angleB);
+    angles.push(angleB);
+    console.log(angles);
+    checker();
 }
 function anglesAppendC(angleC){
     C = angleC;
-    console.log(angleC);
+    angles.push(angleC);
+    console.log(angles);
+    checker();
 }
 
 /*Checking for general triangle*/
+
+function checker(){
+    console.log("Sum of inputs is: " + (angles.length) + (sides.length));
+    console.log("Sum of input sides is: " + (sides.length));
+    console.log("First input angle: " + parseInt(angles[0]));
+    console.log("Second input angle: " + parseInt(angles[1]));
+    console.log("Sum of angles: " + (parseInt(angles[0]) + parseInt(angles[1])));
+
     //Check if inputs are exactly 3
+    if ((angles.length) + (sides.length) !== 3){
+        document.getElementById("warning1").innerHTML = "Enter exactly 3 inputs";
+    }
 
     //Check if of the three inputs, atleast one side has been included
 
@@ -46,8 +68,10 @@ function anglesAppendC(angleC){
     //Then check for solvability based on given angles
 
     //If all is good, calculate
-
-
+    else{
+        document.getElementById("warning1").innerHTML = "Calculate";
+    }
+}
 
 
 
