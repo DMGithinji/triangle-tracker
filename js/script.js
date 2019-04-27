@@ -68,7 +68,7 @@ function checker(){
     }
 
     //Then check for solvability based on input length
-    else if ( (((a+b) < c) || ((a+c) < b) || ((b+c) < a))  && (sides.length === 3) ){
+    else if ( (((a+b) <= c) || ((a+c) <= b) || ((b+c) <= a))  && (sides.length === 3) ){
         document.getElementById("warning1").innerHTML = "The given values don't make a solvable triangle.<br>The sum of any two sides of a triangle must be greater than or equal to the remaining side.<br>Please clear and try again.";
     }
 
@@ -80,6 +80,7 @@ function checker(){
     //If all is good, calculate
     else{
         document.getElementById("warning1").innerHTML = "Calculate";
+        calculate();
     }
 }
 
@@ -88,6 +89,25 @@ function checker(){
 
 
 /*Since it is solvable, calculate for the missing parameters*/
+
+var toRadians = function (degrees){
+    return (degrees * Math.PI / 180);
+}
+var toAngle = function (radians){
+   return (180 * radians / Math.PI);
+}
+function calculate (){
+//Scenario1 - All sides entered (SSS)
+if (sides.length === 3){
+   var sss = function (side1, side2, side3){
+       return toAngle (Math.acos( ((side2*side2) + (side3*side3) - (side1*side1))/(2*side2*side3) ) ).toFixed(4);
+   }
+   A = sss(a,b,c);
+   B = sss(b,a,c);
+   C = sss(c,a,b);
+
+   console.log(A, B, C);
+}
 
 
 
@@ -122,3 +142,6 @@ function checker(){
 //Calculate return r
 
 //Calculate return R
+
+
+}
