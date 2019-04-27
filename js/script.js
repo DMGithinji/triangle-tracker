@@ -72,7 +72,10 @@ function checker(){
     }
 
     //Then check for solvability based on given angles
-
+    else if ( parseInt(angles[0]) + parseInt(angles[1]) >= 180 ){
+        document.getElementById("warning1").innerHTML = "The given values don't make a solvable triangle.<br>The total degrees of all interior angles is always 180°.<br>Please clear and try again.";
+    }
+    
     //If all is good, calculate
     else{
         document.getElementById("warning1").innerHTML = "Calculate";
