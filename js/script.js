@@ -62,7 +62,10 @@ function checker(){
     }
 
     //Check if of the three inputs, atleast one side has been included
-
+    else if ( sides.length === 0){
+        document.getElementById("warning1").innerHTML = "Enter the length of atleast one side";
+    }
+    
     //Then check for solvability based on input length
     
     //Then check for solvability based on given angles
