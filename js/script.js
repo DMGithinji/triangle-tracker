@@ -65,9 +65,12 @@ function checker(){
     else if ( sides.length === 0){
         document.getElementById("warning1").innerHTML = "Enter the length of atleast one side";
     }
-    
+
     //Then check for solvability based on input length
-    
+    else if ( (a+b < c || a+c < b || b+c < a)  && (sides.length === 3) ){
+        document.getElementById("warning1").innerHTML = "The given values don't make a solvable triangle.<br>The sum of any two sides of a triangle must be greater than or equal to the remaining side.<br>Please clear and try again.";
+    }
+
     //Then check for solvability based on given angles
 
     //If all is good, calculate
