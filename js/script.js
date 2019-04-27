@@ -1,59 +1,53 @@
 var sides = [];
 var angles = [];
-
-
-
+var a = 0;
+var b = 0;
+var c = 0;
+var A = 0;
+var B = 0;
+var C = 0;
 
 //Accept inputs from html page
 
-
-
-
-
 function sidesAppendA(sideA){
     a = sideA;
-    sides.push(sideA);
-    alert(sides);
+    console.log(sideA);
+
 }
 function sidesAppendB(sideB){
     b = sideB;
-    sides.push(sideB);
-    alert(sides);
+    console.log(sideB);
 
 }
 function sidesAppendC(sideC){
     c = sideC;
-    sides.push(sideC);
-    alert(sides);
-
+    console.log(sideC);
 }
 function anglesAppendA(angleA){
     A = angleA;
-    angles.push(angleA);
-    alert(angles);
-
+    console.log(angleA);
 }
 function anglesAppendB(angleB){
     B = angleB;
-    angles.push(angleB);S
-    alert(angles);
-
+    console.log(angleB);
 }
 function anglesAppendC(angleC){
     C = angleC;
-    angles.push(angleC);
-    alert(C);
-
+    console.log(angleC);
 }
 
 /*Checking for general triangle*/
+    //Check if inputs are exactly 3
 
-//Check if inputs are exactly 3
+    //Check if of the three inputs, atleast one side has been included
+
+    //Then check for solvability based on input length
+    
+    //Then check for solvability based on given angles
+
+    //If all is good, calculate
 
 
-//Check if of the three inputs, atleast one side has been included
-
-//Then check for solvability given the fed inputs
 
 
 
