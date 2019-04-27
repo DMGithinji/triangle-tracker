@@ -10,40 +10,40 @@ var C = 0;
 //Accept inputs from html page
 
 function sidesAppendA(sideA){
-    a = sideA;
-    sides.push(sideA);
-    console.log(sides);
+    a = parseInt(sideA);
+    sides.push(a);
+    console.log(a);
     checker();
 }
 function sidesAppendB(sideB){
-    b = sideB;
-    sides.push(sideB);
-    console.log(sides);
+    b = parseInt(sideB);
+    sides.push(b);
+    console.log(b);
     checker();
 }
 function sidesAppendC(sideC){
-    c = sideC;
-    sides.push(sideC);
-    console.log(sides);
+    c = parseInt(sideC);
+    sides.push(c);
+    console.log(c);
     checker();
 }
 
 function anglesAppendA(angleA){
-    A = angleA;
-    angles.push(angleA);
-    console.log(angles);
+    A = parseInt(angleA);
+    angles.push(A);
+    console.log(A);
     checker();
 }
 function anglesAppendB(angleB){
-    B = angleB;
-    angles.push(angleB);
-    console.log(angles);
+    B = parseInt(angleB);
+    angles.push(B);
+    console.log(B);
     checker();
 }
 function anglesAppendC(angleC){
-    C = angleC;
-    angles.push(angleC);
-    console.log(angles);
+    C = parseInt(angleC);
+    angles.push(C);
+    console.log(C);
     checker();
 }
 
@@ -52,9 +52,10 @@ function anglesAppendC(angleC){
 function checker(){
     console.log("Sum of inputs is: " + (angles.length) + (sides.length));
     console.log("Sum of input sides is: " + (sides.length));
-    console.log("First input angle: " + parseInt(angles[0]));
-    console.log("Second input angle: " + parseInt(angles[1]));
-    console.log("Sum of angles: " + (parseInt(angles[0]) + parseInt(angles[1])));
+    console.log("First input angle: " + angles[0]);
+    console.log("Second input angle: " + angles[1]);
+    console.log("Sum of angles: " + (angles[0] + angles[1]));
+    console.log(a+b);
 
     //Check if inputs are exactly 3
     if ((angles.length) + (sides.length) !== 3){
@@ -67,7 +68,7 @@ function checker(){
     }
 
     //Then check for solvability based on input length
-    else if ( (a+b < c || a+c < b || b+c < a)  && (sides.length === 3) ){
+    else if ( (((a+b) < c) || ((a+c) < b) || ((b+c) < a))  && (sides.length === 3) ){
         document.getElementById("warning1").innerHTML = "The given values don't make a solvable triangle.<br>The sum of any two sides of a triangle must be greater than or equal to the remaining side.<br>Please clear and try again.";
     }
 
@@ -75,7 +76,7 @@ function checker(){
     else if ( parseInt(angles[0]) + parseInt(angles[1]) >= 180 ){
         document.getElementById("warning1").innerHTML = "The given values don't make a solvable triangle.<br>The total degrees of all interior angles is always 180°.<br>Please clear and try again.";
     }
-    
+
     //If all is good, calculate
     else{
         document.getElementById("warning1").innerHTML = "Calculate";
@@ -87,11 +88,6 @@ function checker(){
 
 
 /*Since it is solvable, calculate for the missing parameters*/
-/*Starting with missing sides and angles
-The scenarios can be categorised into three in general*/
-
-//Scenario1 - All sides entered (SSS)
-//The formula to determine angles on this scenario is ...
 
 
 
