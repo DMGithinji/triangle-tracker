@@ -180,7 +180,48 @@ if (sides.length === 2){
 
     }
 
+    //2. When the unknown side doesn't correspond with given angle
+    //Find given angle of the input values
+    //Then use for sine rule to detemine missing angle with corresponding given side
+    //Then find third angle given all angles add to 180 degrees
+    //Then use third angle to find missing side
+    else if (A !== 0){
+        if (b !== 0){
+            B = ssaAngles(a,A,b);
+            C = aasAngle(A,B);
+            c = aasSides(b,B,C);
+        }
+        else if(c !== 0){
+            C = ssaAngles(a,A,c);
+            B = aasAngle(A,C);
+            b = aasSides(c,C,B);
+        }
+    }
+    else if (B !== 0){
+        if (a !== 0){
+            A = ssaAngles(b,B,a);
+            C = aasAngle(B,A);
+            c = aasSides(a,A,C);
+        }
+        else if(c !== 0){
+            C = ssaAngles(b,B,c);
+            A = aasAngle(C,B);
+            a = aasSides(c,C,A);
+        }
+    }
 
+    else if (C !== 0){
+        if (a !== 0){
+            A = ssaAngles(c,C,a);
+            B = aasAngle(C,A);
+            b = aasSides(a,A,B);
+        }
+        else if (b !== 0){
+            B = ssaAngles(c,C,b);
+            A = aasAngle(C,B);
+            a = aasSides(b,B,A);
+        }
+    }
 }
    
 console.log(a,b,c);
