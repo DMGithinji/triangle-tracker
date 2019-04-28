@@ -79,8 +79,8 @@ function checker(){
 
     //If all is good, calculate
     else{
-        document.getElementById("warning1").innerHTML = "Calculate";
         calculate();
+        document.getElementById("warning1").innerHTML = "Triangle type is:";
     }
 }
 
@@ -226,11 +226,34 @@ if (sides.length === 2){
    
 console.log(a,b,c);
 console.log(A,B,C);
+
+
+
+
 /*Solving for other trianfgle parameters*/
 
 //Output type of triangle based on sides
+if (a ==b==c){
+    triangleType1 = "equilateral";
+}
+else if (a == b || a ==c || b ==c){
+    triangleType1 = "isoscelese";
+}
+else{
+    triangleType1 = "scalene";
+}
 
 //Output type of triangle based on angles
+if ((A > 90) || (B > 90) || (C > 90)){
+    triangleType2 = "obtuse";
+}
+else if ((A === 90) || (B === 90) || (C === 90)){
+    triangleType2 = "right-angle";
+}
+else {
+    triangleType2 = "acute";
+}
+
 
 //Calculate and return perimeter
 
