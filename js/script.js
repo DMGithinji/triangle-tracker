@@ -84,24 +84,16 @@ function checker(){
     }
 }
 
-
-
-
-
 /*Since it is solvable, calculate for the missing parameters*/
-
-var toRadians = function (degrees){
-    return (degrees * Math.PI / 180);
-}
-var toAngle = function (radians){
-   return (180 * radians / Math.PI);
-}
-
-
 function calculate (){
+    var toRadians = function (degrees){
+        return (degrees * Math.PI / 180);
+    }
+    var toAngle = function (radians){
+       return (180 * radians / Math.PI);
+    }
 
 //Scenario1 - All sides entered (SSS)
-
 if (sides.length === 3){
    var sss = function (side1, side2, side3){
        return toAngle (Math.acos( ((side2*side2) + (side3*side3) - (side1*side1))/(2*side2*side3) ) ).toFixed(4);
@@ -114,16 +106,19 @@ if (sides.length === 3){
 }
 
 //Scenario2 - 2 Angles and 1 Side (AAS)
-
-if (sides.length === 1){
-
     //First, determine missing angle
     //Then calculate its angle using a function
-
     var aasAngle = function(angle1,angle2){
         return (180-(angle1+angle2));
     }
 
+    //Then determine missing sides
+    //Then determine the measure of the missing sides using sine rule
+    var aasSides = function(knownSide,knownSideAngle,unknownSideAngle){
+        return ((((Math.sin(toRadians(unknownSideAngle)))/(Math.sin( toRadians(knownSideAngle))))*knownSide));
+    }
+    
+if (sides.length === 1){
     if (A === 0){
         A = aasAngle(B,C);
     }
@@ -135,12 +130,6 @@ if (sides.length === 1){
     }
     console.log(A,B,C);
 
-    //Then determine missing sides
-    //Then determine the measure of the missing sides
-    
-    var aasSides = function(knownSide,knownSideAngle,unknownSideAngle){
-        return((((Math.sin(toRadians(unknownSideAngle)))/(Math.sin( toRadians(knownSideAngle))))*knownSide)).toFixed(4);
-    }
     if (a !== 0){
         b = aasSides(a,A,B);
         c = aasSides(a,A,C);
@@ -158,20 +147,44 @@ if (sides.length === 1){
 }
 
 
-//Scenario2 - 2 Sides, 1 Angle (SSA)
-//The formula for determining side3, is .... and angles is ...
-//Possible scenarios are 9, given (a,b,A),(a,c,A),(a,b,B),(a,c,B),(a,b,C),(a,c,C),(b,c,A),(b,c,B),(b,c,C)
-//To simplify, determine missing side and calculate specifically for it
-//Then determine available angle, so as to calculate specifically for 2 missing angles
+//Scenario3 - 2 Sides, 1 Angle (SSA)
+if (sides.length === 2){
+
+    //Here there are two possible scenarios that might determine the formula to be used
+    
+    //1. When the missing side corresponds to the given angle
+    //The missing side is first  determined using Law of Cosines
+    var ssaSide1 = function(side2, side3, angle1){
+        return Math.sqrt( ((side2*side2) + (side3*side3)) - (2*side2*side3 *(Math.cos(toRadians(angle1)))) );
+    }
+    //Then missing 2 angles determined using sine rule
+    var ssaAngles = function(knownAngleSide, knownAngle, unknownAngleSide){
+        return toAngle(  Math.asin( Math.sin(toRadians(knownAngle)) * unknownAngleSide / knownAngleSide) );
+    }
+
+    if ((a === 0) && (A !== 0)) {
+        a = ssaSide1(b, c, A);
+        B = ssaAngles(a,A,b);
+        C = ssaAngles(a,A,c);
+    }
+    else if ((b === 0) && (B !== 0)){
+        b = ssaSide1(a,b,C);
+        C = ssaAngles(b,B,c);
+        A = ssaAngles(b,B,a);
+    }
+    else if ((c === 0) && (C !== 0)){
+        console.log(a,b,c);
+        c = ssaSide1(a,b,C);
+        A = ssaAngles(c,C,a);
+        B = ssaAngles(c,C,b);
+
+    }
 
 
-//Scenario3 - 1 Side, 2 Angles (ASA)
-//The formula for determining angle 3 is (180-angle A and angle B) and formula for side 2 and three is .......
-//Determine missing angle, and calculate for it
-//Then determine available side, so as to specifically calculate for 2 missing sides 
-
-
-
+}
+   
+console.log(a,b,c);
+console.log(A,B,C);
 /*Solving for other trianfgle parameters*/
 
 //Output type of triangle based on sides
