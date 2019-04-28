@@ -258,11 +258,22 @@ console.log("Triangle Type is " + triangleType1 + " " + triangleType2 );
 
 //Calculate and return perimeter
 perimeter = a+b+c;
-console.log("Perimeter: " + perimeter)
+console.log("Perimeter: " + perimeter);
+
 //Calculate return area
 semiPerimeter = perimeter/2;
-area = Math.sqrt( semiPerimeter*(semiPerimeter-a)*(semiPerimeter-b)*(semiPerimeter-c) )
+area = Math.sqrt( semiPerimeter*(semiPerimeter-a)*(semiPerimeter-b)*(semiPerimeter-c) );
+console.log("Area is: " + area);
+
 //Calculate return h1, h2, h3
+var traingleHeight = function(T,side){
+    return 2*T/side;
+}
+ha=traingleHeight(area, a);
+hb=traingleHeight(area, b);
+hc=traingleHeight(area, c);
+
+console.log("Heights = " + ha, hb, hc);
 
 //Calculate return m1, m2, m3
 
