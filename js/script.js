@@ -276,6 +276,14 @@ hc=traingleHeight(area, c);
 console.log("Heights = " + ha, hb, hc);
 
 //Calculate return m1, m2, m3
+var medians = function(side1,side2,side3){
+    return (Math.sqrt(  2*side2*side2 + 2*side3*side3 -side1*side1 ))/2
+}
+ma=medians(a,b,c);
+mb=medians(b,a,c);
+mc=medians(c,b,a);
+
+console.log("Medians = " + ma, mb, mc);
 
 //Calculate return r
 
