@@ -286,8 +286,12 @@ mc=medians(c,b,a);
 console.log("Medians = " + ma, mb, mc);
 
 //Calculate return r
+innerRadius = area/semiPerimeter;
+console.log("Inner Radius is: " + innerRadius);
 
 //Calculate return R
+outerRadius = a/(2* Math.sin(toRadians(A)) );
+console.log("Outer Radius is: " + outerRadius);
 
 
 }
