@@ -260,7 +260,8 @@ console.log("Triangle Type is " + triangleType1 + " " + triangleType2 );
 perimeter = a+b+c;
 console.log("Perimeter: " + perimeter)
 //Calculate return area
-
+semiPerimeter = perimeter/2;
+area = Math.sqrt( semiPerimeter*(semiPerimeter-a)*(semiPerimeter-b)*(semiPerimeter-c) )
 //Calculate return h1, h2, h3
 
 //Calculate return m1, m2, m3
