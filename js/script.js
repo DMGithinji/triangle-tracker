@@ -254,9 +254,11 @@ else {
     triangleType2 = "acute";
 }
 
+console.log("Triangle Type is " + triangleType1 + " " + triangleType2 );
 
 //Calculate and return perimeter
-
+perimeter = a+b+c;
+console.log("Perimeter: " + perimeter)
 //Calculate return area
 
 //Calculate return h1, h2, h3
