@@ -228,24 +228,22 @@ console.log(a,b,c);
 console.log(A,B,C);
 
 
-
-
 /*Solving for other trianfgle parameters*/
 
 //Output type of triangle based on sides
 if (a ==b==c){
-    triangleType1 = "equilateral";
+    triangleType1 = "Equilateral";
 }
 else if (a == b || a ==c || b ==c){
-    triangleType1 = "isosceles";
+    triangleType1 = "Isosceles";
 }
 else{
-    triangleType1 = "scalene";
+    triangleType1 = "Scalene";
 }
 
 //Output type of triangle based on angles
 if ((A > 90) || (B > 90) || (C > 90)){
-    triangleType2 = "obtuse";
+    triangleType2 = "btuse";
 }
 else if ((A === 90) || (B === 90) || (C === 90)){
     triangleType2 = "right-angle";
@@ -259,6 +257,8 @@ console.log("Triangle Type is " + triangleType1 + " " + triangleType2 );
 //Calculate and return perimeter
 perimeter = a+b+c;
 console.log("Perimeter: " + perimeter);
+document.getElementById("perimeter").innerHTML = perimeter;
+
 
 //Calculate return area
 semiPerimeter = perimeter/2;
