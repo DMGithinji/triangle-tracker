@@ -1,101 +1,108 @@
 /*---------------NAVBAR SECTION STYLING-----------------------*/
 
 .navbar .dropdown-menu a:hover {
-    color: #616161 !important;
+  color: #616161 !important;
 }
 .darken-grey-text {
-    color: #2E2E2E;
+  color: #2E2E2E;
 }
 /*---------------LANDING PAGE SECTION STYLING-----------------------*/
-
+h1{
+text-align: center;
+}
 section{
-  height: auto;
+height: auto;
 
 }
 
 
 
 .title {
-  position: relative;
-  text-transform: uppercase;
-  letter-spacing: 18px;
-  font-size: 23px;
-  line-height: 40px;
-  margin-bottom: 40px;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
+position: relative;
+text-transform: uppercase;
+letter-spacing: 18px;
+font-size: 23px;
+line-height: 40px;
+margin-bottom: 40px;
+font-family: 'Montserrat', sans-serif;
+text-align: center;
 }
 .title:after {
-  content: ' ';
-  position: absolute;
-  bottom: -20px;
-  width: 15%;
-  border-bottom: 1px solid black;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  padding: 15px 0;
+content: ' ';
+position: absolute;
+bottom: -20px;
+width: 15%;
+border-bottom: 1px solid black;
+left: 0;
+right: 0;
+margin: 0 auto;
+padding: 15px 0;
 }
 
 p{
-  text-align: center;
-  font-size: 16px;
-  font-family:'Montserrat', sans-serif;
-  font-weight: 400;
+text-align: center;
+font-size: 16px;
+font-family:'Montserrat', sans-serif;
+font-weight: 400;
 }
-.article__image-wrapper {
-  overflow: hidden;
-  width: 100%;
+.image-wrapper {
+overflow: hidden;
+width: 100%;
 }
 
-.article__image {
-  display: block;
-  margin: 0 auto;
-  max-height: 300px;
+.triangle_img {
+display: block;
+margin: 0 auto;
+max-height: 300px;
+padding-top: 60px;
 }
 
 /*---------------CALCULATION SECTION STYLING-----------------------*/
 
 #calculate{
-  height: auto;
+height: auto;
 }
 .article__image2 {
-  display: block;
-  padding-top: 60px;
-  padding-bottom: 20px;
-  margin: 0 auto;
-  opacity: 0.75;
+display: block;
+padding-top: 60px;
+padding-bottom: 20px;
+margin: 0 auto;
+opacity: 0.75;
 }
 .title2 {
-  position: relative;
-  text-transform: uppercase;
-  letter-spacing: 12px;
-  font-size: 18px;
-  line-height: 40px;
-  margin-bottom: 40px;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
+position: relative;
+text-transform: uppercase;
+letter-spacing: 12px;
+font-size: 18px;
+line-height: 40px;
+margin-bottom: 40px;
+font-family: 'Montserrat', sans-serif;
+text-align: center;
 }
 .title2:after {
-  content: ' ';
-  position: absolute;
-  bottom: -20px;
-  width: 30%;
-  border-bottom: 1px solid black;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  padding: 15px 0;
+content: ' ';
+position: absolute;
+bottom: -20px;
+width: 30%;
+border-bottom: 1px solid black;
+left: 0;
+right: 0;
+margin: 0 auto;
+padding: 15px 0;
 }
 
 .calcSection{
-  margin-top: 50px;
-  font-size: 12px;
-  line-height: 20px;
+margin-top: 50px;
+font-size: 12px;
+line-height: 20px;
 }
 
 
-
+.jumbotron{
+font-size: 24px;
+text-align: center;
+font-weight: 500;
+}
 
 
 

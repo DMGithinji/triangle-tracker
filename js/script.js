@@ -80,6 +80,7 @@ function checker(){
     //If all is good, calculate
     else{
         calculate();
+        console.log("Calculating");
         document.getElementById("warning1").innerHTML = triangleType1 + " " + triangleType2;
     }
 }
@@ -227,11 +228,23 @@ if (sides.length === 2){
 console.log(a,b,c);
 console.log(A,B,C);
 
+document.getElementById("a").innerHTML = a;
+document.getElementById("b").innerHTML = b;
+document.getElementById("c").innerHTML = c;
 
 /*Solving for other trianfgle parameters*/
 
 //Output type of triangle based on sides
 if (a ==b==c){
+document.getElementById("A").innerHTML = A;
+document.getElementById("B").innerHTML = B;
+document.getElementById("C").innerHTML = C;
+
+
+/*Solving for other trianfgle parameters*/
+
+//Output type of triangle based on sides
+if (a == b && b==c){
     triangleType1 = "Equilateral";
 }
 else if (a == b || a ==c || b ==c){
@@ -251,7 +264,6 @@ else if ((A === 90) || (B === 90) || (C === 90)){
 else {
     triangleType2 = "acute";
 }
-
 console.log("Triangle Type is " + triangleType1 + " " + triangleType2 );
 
 //Calculate and return perimeter
@@ -264,6 +276,8 @@ document.getElementById("perimeter").innerHTML = perimeter;
 semiPerimeter = perimeter/2;
 area = Math.sqrt( semiPerimeter*(semiPerimeter-a)*(semiPerimeter-b)*(semiPerimeter-c) );
 console.log("Area is: " + area);
+document.getElementById("area").innerHTML = area;
+
 
 //Calculate return h1, h2, h3
 var traingleHeight = function(T,side){
@@ -272,6 +286,12 @@ var traingleHeight = function(T,side){
 ha=traingleHeight(area, a);
 hb=traingleHeight(area, b);
 hc=traingleHeight(area, c);
+
+document.getElementById("ha").innerHTML = ha;
+document.getElementById("hb").innerHTML = hb;
+document.getElementById("hc").innerHTML = hc;
+
+
 
 console.log("Heights = " + ha, hb, hc);
 
@@ -284,12 +304,19 @@ mb=medians(b,a,c);
 mc=medians(c,b,a);
 
 console.log("Medians = " + ma, mb, mc);
+document.getElementById("ma").innerHTML = ma;
+document.getElementById("mb").innerHTML = mb;
+document.getElementById("mc").innerHTML = mc;
 
 //Calculate return r
 innerRadius = area/semiPerimeter;
 console.log("Inner Radius is: " + innerRadius);
+document.getElementById("innerRadius").innerHTML = innerRadius;
+
 
 //Calculate return R
 outerRadius = a/(2* Math.sin(toRadians(A)) );
 console.log("Outer Radius is: " + outerRadius);
+document.getElementById("outerRadius").innerHTML = outerRadius;
+
 }

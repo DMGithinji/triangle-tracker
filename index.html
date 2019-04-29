@@ -24,15 +24,17 @@
                     </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#"> Calculate <span class="sr-only">(current)</span></a>
+              <li>
+                <a class="nav-link" href="#calculate"> Calculate <span class="sr-only">(current)</span></a>
               </li>
+              <!--
               <li class="nav-item">
                 <a class="nav-link" href="#"> Applications</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"> References</a>
               </li>
+              -->
     
             </ul>
           </div>
@@ -41,7 +43,7 @@
     
 
     <!--Landing Page-->
-
+<!--
       <h1 class="title">I<br>love<br>triangles</h1>
 
       <section id="home" class="home">
@@ -57,31 +59,39 @@
         </article>
     
       </section>
-    
+    -->
     <!--Calculation Page-->
 
 
 
 
 
-    <section id="calculate" class="home">
-        <h1 class="title2">Let's <br>Design Triangles.</h1>
+    <section id="calculate">
+
+      <div class = "container">
         <article class="article">
     
-          <div class="article__copy">
-            <p>Please enter <strong>exactly 3 inputs</strong>...</p>
-            <p>and <strong>atleast one length.</strong></p>
-          </div>
+
     
           <div class="container-fluid">
+
+              <h1 class="title2">Let's Design Triangles.</h1>
+
             <div class="row">
               <div class="col-md-6">
-                <div class="article__image-wrapper">
-                  <img class="article__image2" src="https://etc.usf.edu/clipart/36700/36740/tri19_36740_lg.gif" width="80%" opacity="0.5" />
+                <div class="image-wrapper">
+                  <img class="triangle_img" src="https://etc.usf.edu/clipart/36700/36740/tri19_36740_lg.gif" width="80%" opacity="0.5" padding-top = "40px" />
                 </div>
               </div>
     
               <div class="col-md-6">
+
+                  <div class="instructions">
+                      <p>Please enter <strong>exactly 3 inputs</strong>...</p>
+                      <p>and <strong>atleast one length.</strong></p>
+                    </div>
+
+                
                 <div class="row calcSection">
     
                   <div class="col-sm-6">
@@ -122,13 +132,15 @@
     
             </div>
         </article>
+
+      </div>
     </section>
 
  
     <hr>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <p class="display-2" id="warning1"></p>
+        <p id="warning1"></p>
         <p id="description"></p>
       </div>
     </div>
@@ -172,5 +184,145 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
 
+=======
+    <section id="output">
+        <div class="container">
+          <div class="row">
+
+              <div class="col-sm-12">
+                  <h1>Results</h1>
+
+                  <div class="container">
+                    <form class="form-inline">
+                      <div class="form-group">
+                          <label for="a">a:</label>
+                          <output type="text" class="form-control" id="a">
+                      </div>
+                      <div class="form-group">
+                          <label for="b">b:</label>
+                          <output type="text" class="form-control" id="b">
+                      </div>
+                      <div class="form-group">
+                          <label for="c">c:</label>
+                        <output type="text" class="form-control" id="c">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="container">
+                      <form class="form-inline">
+                        <div class="form-group">
+                            <label for="A">A:</label>
+                            <output type="text" class="form-control" id="A">
+                        </div>
+                        <div class="form-group">
+                            <label for="B">B:</label>
+                            <output type="text" class="form-control" id="B">
+                        </div>
+                        <div class="form-group">
+                            <label for="C">C:</label>
+                          <output type="text" class="form-control" id="C">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+
+
+
+
+
+                <div class="col-sm-12">
+                    <div class="container">
+                      <form class="form-inline">
+                        <div class="form-group">
+                            <label for="perimeter">Perimeter:</label>
+                            <output type="text" class="form-control" id="perimeter">
+                        </div>
+                        <div class="form-group">
+                            <label for="area">Area:</label>
+                            <output type="text" class="form-control" id="area">
+                        </div>
+
+                      </form>
+                    </div>
+                  </div>
+
+
+
+  
+                <div class="col-sm-12">
+                    <div class="container">
+                      <form class="form-inline">
+                        <div class="form-group">
+                            <label for="ma">Median a:</label>
+                            <output type="text" class="form-control" id="ma">
+                        </div>
+                        <div class="form-group">
+                            <label for="mb">Median b:</label>
+                            <output type="text" class="form-control" id="mb">
+                        </div>
+                        <div class="form-group">
+                            <label for="mc">Median c:</label>
+                          <output type="text" class="form-control" id="mc">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+
+                  <div class="col-sm-12">
+                      <div class="container">
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <label for="ha">Height a:</label>
+                              <output type="text" class="form-control" id="ha">
+                          </div>
+                          <div class="form-group">
+                              <label for="hb">Height b:</label>
+                              <output type="text" class="form-control" id="hb">
+                          </div>
+                          <div class="form-group">
+                              <label for="hc">Height c:</label>
+                            <output type="text" class="form-control" id="hc">
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+            
+                  
+                  <div class="col-sm-12">
+                      <div class="container">
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <label for="innerRadius">Inner Radius:</label>
+                              <output type="text" class="form-control" id="innerRadius">
+                          </div>
+                          <div class="form-group">
+                              <label for="outerRadius">Outer Radius:</label>
+                              <output type="text" class="form-control" id="outerRadius">
+                          </div>
+  
+                        </form>
+                      </div>
+                    </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+      </article>
+  </section>
+
+
+
+    <script src = "js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
