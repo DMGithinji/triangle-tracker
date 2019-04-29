@@ -6,3 +6,51 @@
 .darken-grey-text {
     color: #2E2E2E;
 }
+
+/*---------------LANDING PAGE SECTION STYLING-----------------------*/
+
+section{
+    height: auto;
+  
+  }
+  
+  
+  
+  .title {
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 18px;
+    font-size: 23px;
+    line-height: 40px;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+  }
+  .title:after {
+    content: ' ';
+    position: absolute;
+    bottom: -20px;
+    width: 15%;
+    border-bottom: 1px solid black;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 15px 0;
+  }
+  
+  p{
+    text-align: center;
+    font-size: 16px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 400;
+  }
+  .article__image-wrapper {
+    overflow: hidden;
+    width = 100%;
+  }
+  
+  .article__image {
+    display: block;
+    margin: 0 auto;
+    max-height: 300px;
+  }
