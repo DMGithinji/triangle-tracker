@@ -9,7 +9,294 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
     <link rel="stylesheets" href="https://fonts.googleapis.com/css?family=Montserrat">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Triangle Tracker</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheets" href="https://fonts.googleapis.com/css?family=Montserrat">
 
+    <link rel="stylesheets" href="css/style.css">
+</head>
+<body>
+
+
+        <!--Navbar -->
+        <nav class="mb-4 navbar navbar-fixed-top navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXYkCdXl8WAWePybAFWQKPi6O127nPM3SfZZDbD1zjQ2f8lEDOyQ" height="30" alt=""> Triangle Tracker (DMG)</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+            <ul class="navbar-nav ml-auto">
+              <li>
+                <a class="nav-link" href="#calculate"> Calculate <span class="sr-only">(current)</span></a>
+              </li>
+              <!--
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Applications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> References</a>
+              </li>
+              -->
+    
+            </ul>
+          </div>
+        </nav>
+        <!--/.Navbar -->
+    
+
+    <!--Landing Page-->
+<!--
+      <h1 class="title">I<br>love<br>triangles</h1>
+
+      <section id="home" class="home">
+        <article class="article">
+          <div class="article__copy">
+            <p>From artwork to architecture, few appreciate the pivotal role triangles play in the world we live in today.</p>
+            <p> The <strong>Eiffel Tower</strong> is a good example. It has exactly <strong> 186 triangles </strong>, each acting as a building block to support it's 10,000 tons while adding to it's beauty. </p>
+          </div>
+          <div class="article__image-wrapper">
+            <img class="article__image" src="https://illustratedmaps.info/wp-content/uploads/2017/07/eiffel-tower-ink.jpg" width= "auto"; />
+            <hr>
+          </div>
+        </article>
+    
+      </section>
+    -->
+    <!--Calculation Page-->
+
+
+
+
+
+    <section id="calculate">
+
+      <div class = "container">
+        <article class="article">
+    
+
+    
+          <div class="container-fluid">
+
+              <h1 class="title2">Let's Design Triangles.</h1>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="image-wrapper">
+                  <img class="triangle_img" src="https://etc.usf.edu/clipart/36700/36740/tri19_36740_lg.gif" width="80%" opacity="0.5" padding-top = "40px" />
+                </div>
+              </div>
+    
+              <div class="col-md-6">
+
+                  <div class="instructions">
+                      <p>Please enter <strong>exactly 3 inputs</strong>...</p>
+                      <p>and <strong>atleast one length.</strong></p>
+                    </div>
+
+                
+                <div class="row calcSection">
+    
+                  <div class="col-sm-6">
+                    <div class="container">
+                      <form class="form-inline">
+                        <div class="form-group">
+                          <input type="text" class="form-control"  autocomplete="off"  name="sideA"placeholder="Enter a" name="sideA" onchange = "sidesAppendA(this.value)">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control"  autocomplete="off"  name="sideB"   placeholder="Enter b" name="sideB" onchange = "sidesAppendB(this.value)">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control"  autocomplete="off"  name="sideC"   placeholder="Enter c" name="sideC" onchange = "sidesAppendC(this.value)">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+    
+                  <div class="col-sm-6">
+                    <div class="container">
+                      <form class="form-inline">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="angleA" name="angleA" placeholder="Enter A" name="angleA" onchange = "anglesAppendA(this.value)">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="angleB" name="angleB" placeholder="Enter B" name="angleB" onchange = "anglesAppendB(this.value)">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="angleC" name="angleC" placeholder="Enter C" name="angleC" onchange = "anglesAppendC(this.value)">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+    
+                </div>
+    
+              </div>
+    
+            </div>
+        </article>
+
+      </div>
+    </section>
+
+ 
+    <div class="jumbotron jumbotron-fluid" height = "60px">
+      <div class="container">
+        <p id="warning1"></p>
+        <p id="description"></p>
+      </div>
+    </div>
+
+
+
+    <section id="output">
+        <div class="container">
+          <div class="row">
+
+              <div class="col-sm-12">
+                  <h1>Results</h1>
+
+                  <div class="container">
+                    <form class="form-inline">
+                      <div class="form-group">
+                          <label for="a">a:</label>
+                          <output type="text" class="form-control" id="a">
+                      </div>
+                      <div class="form-group">
+                          <label for="b">b:</label>
+                          <output type="text" class="form-control" id="b">
+                      </div>
+                      <div class="form-group">
+                          <label for="c">c:</label>
+                        <output type="text" class="form-control" id="c">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="container">
+                      <form class="form-inline">
+                        <div class="form-group">
+                            <label for="A">A:</label>
+                            <output type="text" class="form-control" id="A">
+                        </div>
+                        <div class="form-group">
+                            <label for="B">B:</label>
+                            <output type="text" class="form-control" id="B">
+                        </div>
+                        <div class="form-group">
+                            <label for="C">C:</label>
+                          <output type="text" class="form-control" id="C">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+
+
+
+
+
+                <div class="col-sm-12">
+                    <div class="container">
+                      <form class="form-inline">
+                        <div class="form-group">
+                            <label for="perimeter">Perimeter:</label>
+                            <output type="text" class="form-control" id="perimeter">
+                        </div>
+                        <div class="form-group">
+                            <label for="area">Area:</label>
+                            <output type="text" class="form-control" id="area">
+                        </div>
+
+                      </form>
+                    </div>
+                  </div>
+
+
+
+  
+                <div class="col-sm-12">
+                    <div class="container">
+                      <form class="form-inline">
+                        <div class="form-group">
+                            <label for="ma">Median a:</label>
+                            <output type="text" class="form-control" id="ma">
+                        </div>
+                        <div class="form-group">
+                            <label for="mb">Median b:</label>
+                            <output type="text" class="form-control" id="mb">
+                        </div>
+                        <div class="form-group">
+                            <label for="mc">Median c:</label>
+                          <output type="text" class="form-control" id="mc">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+
+                  <div class="col-sm-12">
+                      <div class="container">
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <label for="ha">Height a:</label>
+                              <output type="text" class="form-control" id="ha">
+                          </div>
+                          <div class="form-group">
+                              <label for="hb">Height b:</label>
+                              <output type="text" class="form-control" id="hb">
+                          </div>
+                          <div class="form-group">
+                              <label for="hc">Height c:</label>
+                            <output type="text" class="form-control" id="hc">
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+            
+                  
+                  <div class="col-sm-12">
+                      <div class="container">
+                        <form class="form-inline">
+                          <div class="form-group">
+                              <label for="innerRadius">Inner Radius:</label>
+                              <output type="text" class="form-control" id="innerRadius">
+                          </div>
+                          <div class="form-group">
+                              <label for="outerRadius">Outer Radius:</label>
+                              <output type="text" class="form-control" id="outerRadius">
+                          </div>
+  
+                        </form>
+                      </div>
+                    </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+      </article>
+  </section>
+
+
+
+    <script src = "js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
     <link rel="stylesheets" href="css/style.css">
 
 </head>
