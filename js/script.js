@@ -232,6 +232,10 @@ document.getElementById("a").innerHTML = a;
 document.getElementById("b").innerHTML = b;
 document.getElementById("c").innerHTML = c;
 
+/*Solving for other trianfgle parameters*/
+
+//Output type of triangle based on sides
+if (a ==b==c){
 document.getElementById("A").innerHTML = A;
 document.getElementById("B").innerHTML = B;
 document.getElementById("C").innerHTML = C;
@@ -252,7 +256,7 @@ else{
 
 //Output type of triangle based on angles
 if ((A > 90) || (B > 90) || (C > 90)){
-    triangleType2 = "obtuse";
+    triangleType2 = "btuse";
 }
 else if ((A === 90) || (B === 90) || (C === 90)){
     triangleType2 = "right-angle";
@@ -281,7 +285,7 @@ var traingleHeight = function(T,side){
 }
 ha=traingleHeight(area, a);
 hb=traingleHeight(area, b);
-hc=traingleHeight(area, c);ha
+hc=traingleHeight(area, c);
 
 document.getElementById("ha").innerHTML = ha;
 document.getElementById("hb").innerHTML = hb;
