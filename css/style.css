@@ -45,7 +45,7 @@ p{
 }
 .article__image-wrapper {
   overflow: hidden;
-  width = 100%;
+  width: 100%;
 }
 
 .article__image {

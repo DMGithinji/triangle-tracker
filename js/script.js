@@ -80,7 +80,7 @@ function checker(){
     //If all is good, calculate
     else{
         calculate();
-        document.getElementById("warning1").innerHTML = "Triangle type is:";
+        document.getElementById("warning1").innerHTML = triangleType1 + " " + triangleType2;
     }
 }
 
@@ -237,7 +237,7 @@ if (a ==b==c){
     triangleType1 = "equilateral";
 }
 else if (a == b || a ==c || b ==c){
-    triangleType1 = "isoscelese";
+    triangleType1 = "isosceles";
 }
 else{
     triangleType1 = "scalene";
