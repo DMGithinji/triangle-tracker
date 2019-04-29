@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Triangle Tracker</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Arsenal' rel='stylesheet'>
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel='stylesheet'>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js" rel='stylesheet'>
     <link rel="stylesheets" href="css/style.css">
 </head>
 <body>
@@ -62,72 +66,68 @@
 <!--Calculation Page-->
 
 
-    <section id = "calculate">
-        <h1>Calculate</h1>
-        <p id = "warning1" id = "triangle-type1" id = "triangle-type2"></p>
-        <form name="myform">
-            Side a: <input type = "text" name="sideA" placeholder = "Enter length of a" autocomplete="off" onchange = "sidesAppendA(this.value)">
-            <br>
-            Answer a: <input type = "text" name="answerA">
-            <br>
-            Side b: <input type = "text" name="sideB"  placeholder = "Enter length of b" autocomplete="off" onchange = "sidesAppendB(this.value)">
-            <br>
-            Answer b: <input type = "text" name="answerB">
-            <br>
-            Side c: <input type = "text" name="sideC"  placeholder = "Enter length of c"autocomplete="off" onchange = "sidesAppendC(this.value)">
-            <br>
-            Answer c: <input type = "text" name="answerC">
-            <br>
+
+
+
+    <section id="calculate" class="home">
+        <h1 class="title2">Let's <br>Design Triangles.</h1>
+        <article class="article">
     
-            Angle A: <input type = "text" name="angleA" placeholder = "Enter angle A" autocomplete="off" onchange = "anglesAppendA(this.value)">
-            <br>
-            Answer AngleA: <input type = "text" name="answerA">
-            <br>
-            Angle B: <input type = "text" name="angleB" placeholder = "Enter angle B" autocomplete="off" onchange = "anglesAppendB(this.value)">
-            <br>
-            Angle AngleB: <input type = "text" name="angleB">
-            <br>
-            Angle C: <input type = "text" name="angleC"  placeholder = "Enter angle C" autocomplete="off" onchange = "anglesAppendC(this.value)">
-            <br>
-            Angle AngleC: <input type = "text" name="angleC" >
-            <br>
-           <hr>
-            Triangle Type: <input type = "text" name="triangleType">
-            <br>
-            <hr>
-           
-            Parameter: <input type = "text" name="parameter" >
-            <br>
-            Area: <input type = "text" name="area" >
-            <br>
-            Height: <input type = "text" name="height" >
-            <br>
-            h-a: <input type = "text" name="h1" >
-            <br>
-            h-b: <input type = "text" name="h2" >
-            <br>
-            h-c: <input type = "text" name="h3" >
-            <br>
-            m-a: <input type = "text" name="m1" >
-            <br>
-            m-b: <input type = "text" name="m2" >
-            <br>
-            m-c: <input type = "text" name="m3" >
-            <br>
-            radius: <input type = "text" name="radius" >
-            <br>
-            Radius: <input type = "text" name="Radius" >
-            <br>
-        </form>
+          <div class="article__copy">
+            <p>Please enter <strong>exactly 3 inputs</strong>...</p>
+            <p>and <strong>atleast one length.</strong></p>
+          </div>
+    
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="article__image-wrapper">
+                  <img class="article__image2" src="https://etc.usf.edu/clipart/36700/36740/tri19_36740_lg.gif" width="80%" opacity="0.5" />
+                </div>
+              </div>
+    
+              <div class="col-md-6">
+                <div class="row calcSection">
+    
+                  <div class="col-sm-6">
+                    <div class="container">
+                      <form class="form-inline">
+                        <div class="form-group">
+                          <input type="text" class="form-control"  autocomplete="off"  name="sideA"placeholder="Enter a" name="sideA" onchange = "sidesAppendA(this.value)">>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control"  autocomplete="off"  name="sideB"   placeholder="Enter b" name="sideB" onchange = "sidesAppendB(this.value)">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control"  autocomplete="off"  name="sideC"   placeholder="Enter c" name="sideC" onchange = "sidesAppendC(this.value)">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+    
+                  <div class="col-sm-6">
+                    <div class="container">
+                      <form class="form-inline">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="angleA" name="angleA" placeholder="Enter A" name="angleA" onchange = "anglesAppendA(this.value)">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="angleB" name="angleB" placeholder="Enter B" name="angleB" onchange = "anglesAppendB(this.value)">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="angleC" name="angleC" placeholder="Enter C" name="angleC" onchange = "anglesAppendC(this.value)">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+    
+                </div>
+    
+              </div>
+    
+            </div>
+        </article>
     </section>
-
-
-    <section id = "game">
-
-        Game
-
-    </section>
-
 
     <section id = "applications">
         
