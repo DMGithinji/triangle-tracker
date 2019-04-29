@@ -11,61 +11,118 @@
     <link rel="stylesheets" href="css/style.css">
 </head>
 <body>
-    <p id = "warning1" id = "triangle-type1" id = "triangle-type2"></p>
-    <form name="myform">
-        Side a: <input type = "text" name="sideA" placeholder = "Enter length of a" autocomplete="off" onchange = "sidesAppendA(this.value)">
-        <br>
-        Answer a: <input type = "text" name="answerA">
-        <br>
-        Side b: <input type = "text" name="sideB"  placeholder = "Enter length of b" autocomplete="off" onchange = "sidesAppendB(this.value)">
-        <br>
-        Answer b: <input type = "text" name="answerB">
-        <br>
-        Side c: <input type = "text" name="sideC"  placeholder = "Enter length of c"autocomplete="off" onchange = "sidesAppendC(this.value)">
-        <br>
-        Answer c: <input type = "text" name="answerC">
-        <br>
 
-        Angle A: <input type = "text" name="angleA" placeholder = "Enter angle A" autocomplete="off" onchange = "anglesAppendA(this.value)">
-        <br>
-        Answer AngleA: <input type = "text" name="answerA">
-        <br>
-        Angle B: <input type = "text" name="angleB" placeholder = "Enter angle B" autocomplete="off" onchange = "anglesAppendB(this.value)">
-        <br>
-        Angle AngleB: <input type = "text" name="angleB">
-        <br>
-        Angle C: <input type = "text" name="angleC"  placeholder = "Enter angle C" autocomplete="off" onchange = "anglesAppendC(this.value)">
-        <br>
-        Angle AngleC: <input type = "text" name="angleC" >
-        <br>
-       <hr>
-        Triangle Type: <input type = "text" name="triangleType">
-        <br>
-        <hr>
-       
-        Parameter: <input type = "text" name="parameter" >
-        <br>
-        Area: <input type = "text" name="area" >
-        <br>
-        Height: <input type = "text" name="height" >
-        <br>
-        h-a: <input type = "text" name="h1" >
-        <br>
-        h-b: <input type = "text" name="h2" >
-        <br>
-        h-c: <input type = "text" name="h3" >
-        <br>
-        m-a: <input type = "text" name="m1" >
-        <br>
-        m-b: <input type = "text" name="m2" >
-        <br>
-        m-c: <input type = "text" name="m3" >
-        <br>
-        radius: <input type = "text" name="radius" >
-        <br>
-        Radius: <input type = "text" name="Radius" >
-        <br>
-    </form>
+    <main>
+
+        <!--Navbar -->
+        <nav class="mb-4 navbar navbar-fixed-top navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXYkCdXl8WAWePybAFWQKPi6O127nPM3SfZZDbD1zjQ2f8lEDOyQ" height="30" alt=""> Triangle Tracker (DMG)</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"> Calculate <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Applications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> References</a>
+              </li>
+    
+            </ul>
+          </div>
+        </nav>
+        <!--/.Navbar -->
+    
+      </main>
+
+
+    <section id = "calculate">
+        <h1>Calculate</h1>
+        <p id = "warning1" id = "triangle-type1" id = "triangle-type2"></p>
+        <form name="myform">
+            Side a: <input type = "text" name="sideA" placeholder = "Enter length of a" autocomplete="off" onchange = "sidesAppendA(this.value)">
+            <br>
+            Answer a: <input type = "text" name="answerA">
+            <br>
+            Side b: <input type = "text" name="sideB"  placeholder = "Enter length of b" autocomplete="off" onchange = "sidesAppendB(this.value)">
+            <br>
+            Answer b: <input type = "text" name="answerB">
+            <br>
+            Side c: <input type = "text" name="sideC"  placeholder = "Enter length of c"autocomplete="off" onchange = "sidesAppendC(this.value)">
+            <br>
+            Answer c: <input type = "text" name="answerC">
+            <br>
+    
+            Angle A: <input type = "text" name="angleA" placeholder = "Enter angle A" autocomplete="off" onchange = "anglesAppendA(this.value)">
+            <br>
+            Answer AngleA: <input type = "text" name="answerA">
+            <br>
+            Angle B: <input type = "text" name="angleB" placeholder = "Enter angle B" autocomplete="off" onchange = "anglesAppendB(this.value)">
+            <br>
+            Angle AngleB: <input type = "text" name="angleB">
+            <br>
+            Angle C: <input type = "text" name="angleC"  placeholder = "Enter angle C" autocomplete="off" onchange = "anglesAppendC(this.value)">
+            <br>
+            Angle AngleC: <input type = "text" name="angleC" >
+            <br>
+           <hr>
+            Triangle Type: <input type = "text" name="triangleType">
+            <br>
+            <hr>
+           
+            Parameter: <input type = "text" name="parameter" >
+            <br>
+            Area: <input type = "text" name="area" >
+            <br>
+            Height: <input type = "text" name="height" >
+            <br>
+            h-a: <input type = "text" name="h1" >
+            <br>
+            h-b: <input type = "text" name="h2" >
+            <br>
+            h-c: <input type = "text" name="h3" >
+            <br>
+            m-a: <input type = "text" name="m1" >
+            <br>
+            m-b: <input type = "text" name="m2" >
+            <br>
+            m-c: <input type = "text" name="m3" >
+            <br>
+            radius: <input type = "text" name="radius" >
+            <br>
+            Radius: <input type = "text" name="Radius" >
+            <br>
+        </form>
+    </section>
+
+
+    <section id = "game">
+
+        Game
+
+    </section>
+
+
+    <section id = "applications">
+        
+        Applications
+    
+    </section>
+
+
+    <section id = "references">
+        
+        References
+    
+    </section>
+
+
+
+
 
 
     <script src = "js/script.js"></script>

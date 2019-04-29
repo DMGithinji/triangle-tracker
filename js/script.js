@@ -292,6 +292,4 @@ console.log("Inner Radius is: " + innerRadius);
 //Calculate return R
 outerRadius = a/(2* Math.sin(toRadians(A)) );
 console.log("Outer Radius is: " + outerRadius);
-
-
 }
