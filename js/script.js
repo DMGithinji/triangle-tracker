@@ -240,7 +240,7 @@ document.getElementById("C").innerHTML = C;
 /*Solving for other trianfgle parameters*/
 
 //Output type of triangle based on sides
-if (a ==b==c){
+if (a == b && b==c){
     triangleType1 = "Equilateral";
 }
 else if (a == b || a ==c || b ==c){
