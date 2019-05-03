@@ -63,18 +63,18 @@ function checker() {
     document.getElementById("warning1").innerHTML = "Please reload and try again!";
   }
  //Check if of the three inputs, atleast one side has been included
-  else if (sides.length === 0) {
-    document.getElementById("warning1").innerHTML = "Enter the length of atleast one side";
+  else if (sides.length === 0){
+    document.getElementById("warning1").innerHTML = "Enter the length of atleast one side. <br><br>Please reload page to try again."
   }
 
   //Then check for solvability based on input length
   else if ((((a + b) <= c) || ((a + c) <= b) || ((b + c) <= a)) && (sides.length === 3)) {
-    document.getElementById("warning1").innerHTML = "The given values don't make a solvable triangle.<br>The sum of any two sides of a triangle must be greater than the remaining side.<br>Please reload and try again.";
+    document.getElementById("warning1").innerHTML = "The given values don't make a solvable triangle.<br>The sum of any two sides of a triangle must be greater than the remaining side.<br><br>Please reload to try again.";
   }
 
   //Then check for solvability based on given angles
   else if (parseInt(angles[0]) + parseInt(angles[1]) >= 180) {
-    document.getElementById("warning1").innerHTML = "The given values don't make a solvable triangle.<br>The total degrees of all interior angles is always 180°.<br>Please reload page and try again.";
+    document.getElementById("warning1").innerHTML = "The given values don't make a solvable triangle.<br>The total degrees of all interior angles is always 180°.<br><br>Please reload page to try again.";
   }
 
   //If all is good, calculate
@@ -238,13 +238,13 @@ function calculate() {
 
   //Output type of triangle based on angles
   if ((A > 90) || (B > 90) || (C > 90)) {
-    triangleType2 = "obtuse";
+    triangleType2 = "obtuse. <br><br> Please reload page to try again!";
   } 
   else if ((Math.round(A) === 90) || (Math.round(B) === 90) || (Math.round(C) === 90)) {
-    triangleType2 = "right-angle";
+    triangleType2 = "right-angle. <br><br>Please reload page to try again!";
   } 
   else {
-    triangleType2 = "acute";
+    triangleType2 = "acute. <br><br>Please reload page to try again!";
   }
   console.log("Triangle Type is " + triangleType1 + " " + triangleType2);
 
