@@ -8,49 +8,42 @@ var B = 0;
 var C = 0;
 
 //Accept inputs from html page
-
 function sidesAppendA(sideA) {
   a = parseInt(sideA);
   sides.push(a);
   console.log(a);
   checker();
 }
-
 function sidesAppendB(sideB) {
   b = parseInt(sideB);
   sides.push(b);
   console.log(b);
   checker();
 }
-
 function sidesAppendC(sideC) {
   c = parseInt(sideC);
   sides.push(c);
   console.log(c);
   checker();
 }
-
 function anglesAppendA(angleA) {
   A = parseInt(angleA);
   angles.push(A);
   console.log(A);
   checker();
 }
-
 function anglesAppendB(angleB) {
   B = parseInt(angleB);
   angles.push(B);
   console.log(B);
   checker();
 }
-
 function anglesAppendC(angleC) {
   C = parseInt(angleC);
   angles.push(C);
   console.log(C);
   checker();
 }
-
 /*Checking for general triangle*/
 
 function checker() {
@@ -69,19 +62,15 @@ function checker() {
   else if (sides.length === 0) {
     document.getElementById("warning1").innerHTML = "Enter the length of atleast one side";
   }
-  //Check if of the three inputs, atleast one side has been included
-  else if (sides.length === 0) {
-    document.getElementById("warning1").innerHTML = "Enter the length of atleast one side";
-  }
 
   //Then check for solvability based on input length
   else if ((((a + b) <= c) || ((a + c) <= b) || ((b + c) <= a)) && (sides.length === 3)) {
-    document.getElementById("warning1").innerHTML = "The given values don't make a solvable triangle.<br>The sum of any two sides of a triangle must be greater than or equal to the remaining side.<br>Please clear and try again.";
+    document.getElementById("warning1").innerHTML = "The given values don't make a solvable triangle.<br>The sum of any two sides of a triangle must be greater than the remaining side.<br>Please reload and try again.";
   }
 
   //Then check for solvability based on given angles
   else if (parseInt(angles[0]) + parseInt(angles[1]) >= 180) {
-    document.getElementById("warning1").innerHTML = "The given values don't make a solvable triangle.<br>The total degrees of all interior angles is always 180°.<br>Please clear and try again.";
+    document.getElementById("warning1").innerHTML = "The given values don't make a solvable triangle.<br>The total degrees of all interior angles is always 180°.<br>Please reload page and try again.";
   }
 
   //If all is good, calculate
@@ -104,7 +93,7 @@ function calculate() {
   //Scenario1 - All sides entered (SSS)
   if (sides.length === 3) {
     var sss = function(side1, side2, side3) {
-      return toAngle(Math.acos(((side2 * side2) + (side3 * side3) - (side1 * side1)) / (2 * side2 * side3))).toFixed(4);
+      return toAngle(Math.acos(((side2 * side2) + (side3 * side3) - (side1 * side1)) / (2 * side2 * side3)));
     }
     A = sss(a, b, c);
     B = sss(b, a, c);
@@ -152,7 +141,6 @@ function calculate() {
 
   }
 
-
   //Scenario3 - 2 Sides, 1 Angle (SSA)
   if (sides.length === 2) {
 
@@ -167,8 +155,6 @@ function calculate() {
     var ssaAngles = function(knownAngleSide, knownAngle, unknownAngleSide) {
       return toAngle(Math.asin(Math.sin(toRadians(knownAngle)) * unknownAngleSide / knownAngleSide));
     }
-
-    
     if ((a === 0) && (A !== 0)) {
       a = ssaSide1(b, c, A);
       B = ssaAngles(a, A, b);
@@ -182,9 +168,7 @@ function calculate() {
       c = ssaSide1(a, b, C);
       A = ssaAngles(c, C, a);
       B = ssaAngles(c, C, b);
-
     }
-
     //2. When the unknown side doesn't correspond with given angle
     //Find given angle of the input values
     //Then use for sine rule to detemine missing angle with corresponding given side
@@ -215,7 +199,8 @@ function calculate() {
         A = ssaAngles(c, C, a);
         B = aasAngle(C, A);
         b = aasSides(a, A, B);
-      } else if (b !== 0) {
+      }
+    else if (b !== 0) {
         B = ssaAngles(c, C, b);
         A = aasAngle(C, B);
         a = aasSides(b, B, A);
@@ -226,14 +211,13 @@ function calculate() {
   console.log(a, b, c);
   console.log(A, B, C);
 
-  document.getElementById("a").innerHTML = a;
-  document.getElementById("b").innerHTML = b;
-  document.getElementById("c").innerHTML = c;
+  document.getElementById("a").innerHTML = a.toFixed(3);
+  document.getElementById("b").innerHTML = b.toFixed(3);
+  document.getElementById("c").innerHTML = c.toFixed(3);
 
-  document.getElementById("A").innerHTML = A;
-  document.getElementById("B").innerHTML = B;
-  document.getElementById("C").innerHTML = C;
-
+  document.getElementById("A").innerHTML = A.toFixed(3);
+  document.getElementById("B").innerHTML = B.toFixed(3);
+  document.getElementById("C").innerHTML = C.toFixed(3);
 
   /*Solving for other trianfgle parameters*/
 
@@ -252,7 +236,7 @@ function calculate() {
   if ((A > 90) || (B > 90) || (C > 90)) {
     triangleType2 = "obtuse";
   } 
-  else if ((A === 90) || (B === 90) || (C === 90)) {
+  else if ((Math.round(A) === 90) || (Math.round(B) === 90) || (Math.round(C) === 90)) {
     triangleType2 = "right-angle";
   } 
   else {
@@ -263,15 +247,13 @@ function calculate() {
   //Calculate and return perimeter
   perimeter = a + b + c;
   console.log("Perimeter: " + perimeter);
-  document.getElementById("perimeter").innerHTML = perimeter;
-
+  document.getElementById("perimeter").innerHTML = perimeter.toFixed(3);
 
   //Calculate return area
   semiPerimeter = perimeter / 2;
   area = Math.sqrt(semiPerimeter * (semiPerimeter - a) * (semiPerimeter - b) * (semiPerimeter - c));
   console.log("Area is: " + area);
-  document.getElementById("area").innerHTML = area;
-
+  document.getElementById("area").innerHTML = area.toFixed(3);
 
   //Calculate return h1, h2, h3
   var traingleHeight = function(T, side) {
@@ -281,11 +263,9 @@ function calculate() {
   hb = traingleHeight(area, b);
   hc = traingleHeight(area, c);
 
-  document.getElementById("ha").innerHTML = ha;
-  document.getElementById("hb").innerHTML = hb;
-  document.getElementById("hc").innerHTML = hc;
-
-
+  document.getElementById("ha").innerHTML = ha.toFixed(3);
+  document.getElementById("hb").innerHTML = hb.toFixed(3);
+  document.getElementById("hc").innerHTML = hc.toFixed(3);
 
   console.log("Heights = " + ha, hb, hc);
 
@@ -298,24 +278,18 @@ function calculate() {
   mc = medians(c, b, a);
 
   console.log("Medians = " + ma, mb, mc);
-  document.getElementById("ma").innerHTML = ma;
-  document.getElementById("mb").innerHTML = mb;
-  document.getElementById("mc").innerHTML = mc;
+  document.getElementById("ma").innerHTML = ma.toFixed(3);
+  document.getElementById("mb").innerHTML = mb.toFixed(3);
+  document.getElementById("mc").innerHTML = mc.toFixed(3);
 
   //Calculate return r
   innerRadius = area / semiPerimeter;
   console.log("Inner Radius is: " + innerRadius);
-  document.getElementById("innerRadius").innerHTML = innerRadius;
-
+  document.getElementById("innerRadius").innerHTML = innerRadius.toFixed(3);
 
   //Calculate return R
   outerRadius = a / (2 * Math.sin(toRadians(A)));
   console.log("Outer Radius is: " + outerRadius);
-  document.getElementById("outerRadius").innerHTML = outerRadius;
+  document.getElementById("outerRadius").innerHTML = outerRadius.toFixed(3);
 
-}
-
-function myFunction() {
-  console.log("Hi, I have reset");
-  document.getElementsByClassName("form-inline").reset();
 }
