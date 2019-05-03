@@ -55,8 +55,12 @@ function checker() {
   console.log(a + b);
 
   //Check if inputs are exactly 3
-  if ((angles.length) + (sides.length) !== 3) {
+  if ((angles.length) + (sides.length) < 3) {
     document.getElementById("warning1").innerHTML = "Enter exactly 3 inputs";
+  }
+  //Check if inputs are exactly 3
+  else if ((angles.length) + (sides.length) > 3) {
+    document.getElementById("warning1").innerHTML = "Please reload and try again!";
   }
  //Check if of the three inputs, atleast one side has been included
   else if (sides.length === 0) {
@@ -219,7 +223,7 @@ function calculate() {
   document.getElementById("B").innerHTML = B.toFixed(3);
   document.getElementById("C").innerHTML = C.toFixed(3);
 
-  /*Solving for other trianfgle parameters*/
+  /*Solving for other triangle parameters*/
 
   //Output type of triangle based on sides
   if (a == b && b == c) {

@@ -1,3 +1,8 @@
+.navbar-brand img{
+  height: 30px;
+  width: auto;
+}
+
 /*---------------LANDING PAGE SECTION STYLING-----------------------*/
 h1 {
   text-align: center;
