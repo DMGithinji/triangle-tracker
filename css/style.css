@@ -1,12 +1,4 @@
-/*---------------NAVBAR SECTION STYLING-----------------------*/
 
-.navbar .dropdown-menu a:hover {
-  color: #616161 !important;
-}
-
-.darken-grey-text {
-  color: #2E2E2E;
-}
 /*---------------LANDING PAGE SECTION STYLING-----------------------*/
 h1 {
   text-align: center;
@@ -19,8 +11,8 @@ section {
 .title {
   position: relative;
   text-transform: uppercase;
-  letter-spacing: 18px;
-  font-size: 23px;
+  letter-spacing: 12px;
+  font-size: 18px;
   line-height: 40px;
   margin-bottom: 40px;
   font-family: 'Montserrat', sans-serif;
@@ -31,7 +23,7 @@ section {
   content: ' ';
   position: absolute;
   bottom: -20px;
-  width: 15%;
+  width: 30%;
   border-bottom: 1px solid black;
   left: 0;
   right: 0;
@@ -55,45 +47,22 @@ p {
   display: block;
   margin: 0 auto;
   max-height: 300px;
-  padding-top: 60px;
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
 /*---------------CALCULATION SECTION STYLING-----------------------*/
-
+#calculate title{
+  padding-top: 25px;
+}  
+  
+#calculate .row{
+  margin-bottom: 25px;
+}
 #calculate {
   height: auto;
 }
 
-.article__image2 {
-  display: block;
-  padding-top: 60px;
-  padding-bottom: 20px;
-  margin: 0 auto;
-  opacity: 0.75;
-}
-
-.title2 {
-  position: relative;
-  text-transform: uppercase;
-  letter-spacing: 12px;
-  font-size: 18px;
-  line-height: 40px;
-  margin-bottom: 40px;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-}
-
-.title2:after {
-  content: ' ';
-  position: absolute;
-  bottom: -20px;
-  width: 30%;
-  border-bottom: 1px solid black;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  padding: 15px 0;
-}
 
 .calcSection {
   margin-top: 50px;
@@ -101,19 +70,26 @@ p {
   line-height: 20px;
 }
 
-.jumbotron {
-  font-size: 24px;
+/*------------------------------*/
+.jumbotron p{
+  font-weight: 600;
+  font-size: 20px;
   text-align: center;
-  font-weight: 500;
+  color: #222;
 }
 
-
-
-
-
-
-
-
-
-
-/*------------------------------*/
+/*-------------------------------*/
+#output{
+  margin-bottom: 50px;
+}
+#output .title:after {
+  content: ' ';
+  position: absolute;
+  bottom: -20px;
+  width: 10%;
+  border-bottom: 1px solid black;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 15px 0;
+}
