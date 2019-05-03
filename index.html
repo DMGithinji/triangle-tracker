@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
     <link rel="stylesheets" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="./css/style.css">
+
   </head>
 
   <body>
     <!--Navbar -->
-    <nav class="mb-4 navbar navbar-fixed-top navbar-expand-lg navbar-light">
+    <nav class="mb-4 navbar sticky-top navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXYkCdXl8WAWePybAFWQKPi6O127nPM3SfZZDbD1zjQ2f8lEDOyQ" alt="Site Logo"> Triangle Tracker (DMG)</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -48,54 +49,54 @@
     <section id="calculate">
       <div class="container">
         <div class="container-fluid">
-          <h1 class="title">Let's Design Triangles.</h1>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="image-wrapper">
-                <img class="triangle_img" src="https://etc.usf.edu/clipart/36700/36740/tri19_36740_lg.gif">
-              </div>
+        <h1 class="title">Let's Design Triangles.</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="image-wrapper">
+              <img class="triangle_img" src="https://etc.usf.edu/clipart/36700/36740/tri19_36740_lg.gif">
             </div>
-            <div class="col-md-6">
-              <div class="instructions">
-                <p>Please enter <strong>exactly 3 inputs</strong>...</p>
-                <p>and <strong>atleast one length,</strong> then 'click' to calculate.</p>
-              </div>
-              <!--Triangle Parameter Input-->
-              <div class="row calcSection">
-                <div class="col-sm-6">
-                  <div class="container">
-                    <form class="form-inline">
-                      <div class="form-group">
-                        <input type="text" class="form-control myForm" autocomplete="off" placeholder="Enter a" name="sideA" onchange="sidesAppendA(this.value)">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control myForm" autocomplete="off" placeholder="Enter b" name="sideB" onchange="sidesAppendB(this.value)">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control myForm" autocomplete="off" placeholder="Enter c" name="sideC" onchange="sidesAppendC(this.value)">
-                      </div>
-                    </form>
-                  </div>
+          </div>
+          <div class="col-md-6">
+            <div class="instructions">
+              <p>Please enter <strong>exactly 3 inputs</strong>...</p>
+              <p>and <strong>atleast one length,</strong> then 'click' to calculate.</p>
+            </div>
+            <!--Triangle Parameter Input-->
+            <div class="row calcSection">
+              <div class="col-sm-6">
+                <div class="container">
+                  <form class="form-inline">
+                    <div class="form-group">
+                      <input type="text" class="form-control myForm" autocomplete="off" placeholder="Enter a" name="sideA" onchange="sidesAppendA(this.value)">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control myForm" autocomplete="off" placeholder="Enter b" name="sideB" onchange="sidesAppendB(this.value)">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control myForm" autocomplete="off" placeholder="Enter c" name="sideC" onchange="sidesAppendC(this.value)">
+                    </div>
+                  </form>
                 </div>
-                <div class="col-sm-6">
-                  <div class="container">
-                    <form class="form-inline">
-                      <div class="form-group">
-                        <input type="text" class="form-control myForm" id="angleA" placeholder="Enter A" name="angleA" onchange="anglesAppendA(this.value)">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control myForm" id="angleB" placeholder="Enter B" name="angleB" onchange="anglesAppendB(this.value)">
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control myForm" id="angleC" placeholder="Enter C" name="angleC" onchange="anglesAppendC(this.value)">
-                      </div>
-                    </form>
-                  </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="container">
+                  <form class="form-inline">
+                    <div class="form-group">
+                      <input type="text" class="form-control myForm" id="angleA" placeholder="Enter A" name="angleA" onchange="anglesAppendA(this.value)">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control myForm" id="angleB" placeholder="Enter B" name="angleB" onchange="anglesAppendB(this.value)">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control myForm" id="angleC" placeholder="Enter C" name="angleC" onchange="anglesAppendC(this.value)">
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </section>
     <!--Results-Triangle Type-->
     <div class="jumbotron jumbotron-fluid">
@@ -213,6 +214,9 @@
       </div>
       </div>
     </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
   </body>
 </html
