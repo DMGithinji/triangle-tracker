@@ -3,20 +3,17 @@
 This is a website that helps one determine various parameters of a triangle once the user enters 3 measurements.
 This was part of an assignment while at a coding bootcamp to aid in developing skills in Behaviour Driven Development (BDD).
 
-##### Author: Denis Githinji
+## Built By Denis Githinji
 
 ### Features
 The  user is prompted to enter exactly 3 parameters of the triangle and given information in the given input fields.
 Once they have entered the relevant measurements, the output is automatically displayed
 
 ## Description
-This is a website that can be used to determine the parameters o a triangle.
-
-## Built By Denis Githinji
-
+This is a website that can be used to determine the parameters of a triangle.
 
 ## Features
-- The user is prompted to input exactly 3 paraeters of a triangle in the provided input fields.
+- The user is prompted to input exactly 3 parameters of a triangle in the provided input fields.
 - The results are automatically displayed the correct inputs are fed.
 - These include parameters such as missing lengths, angles, perimeter, area etc.
 
@@ -60,4 +57,5 @@ This software is Licensed under MIT license Copyright (2018) [DMGithinji](https:
     For any clarification or feedback on this project, feel free to contact the author at [dmwaigithinji@gmail.com](mailto:dmwaigithinji@gmail.com)
 
 ## License
-This software is Licensed under MIT license Copyright (2018) [DMGithinji](https://opensource.org)
+This software is Licensed under MIT license Copyright (2018) 
+[DMGithinji](https://opensource.org)
