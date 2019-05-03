@@ -240,18 +240,22 @@ function calculate() {
   //Output type of triangle based on sides
   if (a == b && b == c) {
     triangleType1 = "Equilateral";
-  } else if (a == b || a == c || b == c) {
+  } 
+  else if (a == b || a == c || b == c) {
     triangleType1 = "Isosceles";
-  } else {
+  } 
+  else {
     triangleType1 = "Scalene";
   }
 
   //Output type of triangle based on angles
   if ((A > 90) || (B > 90) || (C > 90)) {
     triangleType2 = "obtuse";
-  } else if ((A === 90) || (B === 90) || (C === 90)) {
+  } 
+  else if ((A === 90) || (B === 90) || (C === 90)) {
     triangleType2 = "right-angle";
-  } else {
+  } 
+  else {
     triangleType2 = "acute";
   }
   console.log("Triangle Type is " + triangleType1 + " " + triangleType2);
@@ -309,4 +313,9 @@ function calculate() {
   console.log("Outer Radius is: " + outerRadius);
   document.getElementById("outerRadius").innerHTML = outerRadius;
 
+}
+
+function myFunction() {
+  console.log("Hi, I have reset");
+  document.getElementsByClassName("form-inline").reset();
 }
