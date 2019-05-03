@@ -65,7 +65,10 @@ function checker() {
   if ((angles.length) + (sides.length) !== 3) {
     document.getElementById("warning1").innerHTML = "Enter exactly 3 inputs";
   }
-
+ //Check if of the three inputs, atleast one side has been included
+  else if (sides.length === 0) {
+    document.getElementById("warning1").innerHTML = "Enter the length of atleast one side";
+  }
   //Check if of the three inputs, atleast one side has been included
   else if (sides.length === 0) {
     document.getElementById("warning1").innerHTML = "Enter the length of atleast one side";
@@ -165,12 +168,13 @@ function calculate() {
       return toAngle(Math.asin(Math.sin(toRadians(knownAngle)) * unknownAngleSide / knownAngleSide));
     }
 
+    
     if ((a === 0) && (A !== 0)) {
       a = ssaSide1(b, c, A);
       B = ssaAngles(a, A, b);
       C = ssaAngles(a, A, c);
     } else if ((b === 0) && (B !== 0)) {
-      b = ssaSide1(a, b, C);
+      b = ssaSide1(a, c, B);
       C = ssaAngles(b, B, c);
       A = ssaAngles(b, B, a);
     } else if ((c === 0) && (C !== 0)) {
